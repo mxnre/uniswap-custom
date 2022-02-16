@@ -1,0 +1,41 @@
+{
+  "name": "gelato-kyber",
+  "version": "0.0.1",
+  "description": "An example playground for Gelato Kyber automation",
+  "repository": "https://github.com/gelatodigital/gelato-kyber.git",
+  "author": "The legendary members of gelato-digital",
+  "private": false,
+  "scripts": {
+    "get-dai": "npx buidler get-dai --network rinkeby",
+    "get-knc": "npx buidler get-token-faucet 0x6FA355a7b6bD2D6bD8b927C489221BFBb6f1D7B2 --network rinkeby",
+    "assign-executor": "npx buidler test demo/Part-2_Gelato_Provider/step1-assign-executor.js",
+    "provide-funds": "npx buidler test demo/Part-2_Gelato_Provider/step2-provide-funds.js",
+    "whitelist-task": "npx buidler test demo/Part-2_Gelato_Provider/step3-whitelist-task.js",
+    "add-provider-module": "npx buidler test demo/Part-2_Gelato_Provider/step4-add-provider-module.js",
+    "batch-provide": "npx buidler test demo/Part-2_Gelato_Provider/batch-provide.js",
+    "batch-unprovide": "npx buidler test demo/Part-2_Gelato_Provider/batch-unprovide.js",
+    "create-userproxy": "npx buidler test demo/Part-1_Gelato_User/step1-create-user-proxy.js",
+    "userproxy-setup": "npx buidler test demo/Part-1_Gelato_User/step2-user-proxy-setup.js",
+    "withdraw-remaining-eth": "npx buidler test demo/Part-1_Gelato_User/step4-withdraw-remaining-eth.js",
+    "submit-task-uniswap-self-provider-and-monitor": "npx buidler test demo/Part-1_Gelato_User/step3-submit-task-uniswap.js && npx buidler run demo/Part-1_Gelato_User/monitorBalanceChanges.js",
+    "submit-task-external-provider-and-monitor": "npx buidler test demo/Part-2_Gelato_Provider/step5-submit-task.js && npx buidler run demo/Part-1_Gelato_User/monitorBalanceChanges.js",
+    "create-userproxy-setup-proxy-and-submit-task": "npx buidler test demo/Part-1_Gelato_User/create-proxy-setup-proxy-submitTask.js",
+    "monitor-balances": "npx buidler run demo/Part-1_Gelato_User/monitorBalanceChanges.js"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.4",
+    "@babel/preset-env": "7.7.4",
+    "@babel/register": "7.7.4",
+    "@gelatonetwork/core": "^0.3.0",
+    "@nomiclabs/buidler": "1.3.6",
+    "@nomiclabs/buidler-ethers": "1.3.3",
+    "@nomiclabs/buidler-waffle": "1.3.4",
+    "chai": "4.2.0",
+    "dotenv": "8.2.0",
+    "ethereum-waffle": "2.5.1",
+    "ethers": "4.0.47",
+    "prettier": "2.0.3",
+    "solc": "0.6.10"
+  },
+  "dependencies": {}
+}
